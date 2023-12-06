@@ -1,5 +1,4 @@
-# k8s-deployment-strategies
-Testing Deployment Strategies in Kubernetes
+# Deployment Strategies in Kubernetes
 
 We will use the following templates in order to test diferent strategies.
 
