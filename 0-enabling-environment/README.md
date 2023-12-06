@@ -26,3 +26,18 @@ kubectl get services --namespace ingress-basic -o wide -w ingress-nginx-controll
 NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP     PORT(S)                      AGE   SELECTOR
 ingress-nginx-controller   LoadBalancer   10.0.65.205   EXTERNAL-IP     80:30957/TCP,443:32414/TCP   1m   app.kubernetes.io/component=controller,app.kubernetes.io/instance=ingress-nginx,app.kubernetes.io/name=ingress-nginx
 ```
+
+4. With the External IP ready, we can test our NGINX Ingress Controller 
+
+```bash
+curl http://20.96.154.217
+
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+```
+  The result is expected since we don't have any Ingress created yet.
